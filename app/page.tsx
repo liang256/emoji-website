@@ -1,12 +1,14 @@
 'use client'
 
-// pages/index.tsx
+// Import necessary modules and data
 import { EmojiCategory } from './types';
 import emojiData from './emoji.json';
 
+// Convert JSON data to EmojiCategory type
 const emojis: EmojiCategory = emojiData;
 
 const Home: React.FC = () => {
+  // Function to copy emoji to clipboard
   const copyEmoji = (emoji: string) => {
     navigator.clipboard.writeText(emoji).then(() => {
       alert(`Emoji copied: ${emoji}`);
@@ -15,12 +17,13 @@ const Home: React.FC = () => {
     });
   };
 
+  // Generate emoji list
   const emojiList = Object.entries(emojis).map(([category, emojiList]) => (
-    <div key={category} className={category}>
-      <h2>{category}</h2>
-      <div>
+    <div key={category} className="mb-8">
+      <h2 className="text-2xl font-bold mb-4">{category}</h2>
+      <div className="flex flex-wrap">
         {emojiList.map((emoji) => (
-          <span key={emoji} className={emoji} onClick={() => copyEmoji(emoji)}>
+          <span key={emoji} className="text-4xl cursor-pointer m-2" onClick={() => copyEmoji(emoji)}>
             {emoji}
           </span>
         ))}
@@ -29,7 +32,7 @@ const Home: React.FC = () => {
   ));
 
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center min-h-screen bg-gray-100">
       <div className="bg-green-500 text-white p-4">
         {emojiList}
       </div>
