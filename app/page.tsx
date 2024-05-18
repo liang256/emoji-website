@@ -22,33 +22,24 @@ export default function Home() {
     });
   };
 
-  return (
-    <div className="container">
-      <Head>
-        <title>Emoji List by Category</title>
-        <meta name="description" content="List of emojis by category with copy functionality" />
-      </Head>
-
-      <nav className="navbar">
-        Emoji List
-      </nav>
-
-      <main className="main">
-        <h1 className="title">Emoji List by Category</h1>
-
-        {Object.entries(emojis).map(([category, emojiList]) => (
-          <div key={category} className={category}>
-            <h2>{category}</h2>
-            <div>
-              {emojiList.map((emoji) => (
-                <span key={emoji} className={emoji} onClick={() => copyEmoji(emoji)}>
-                  {emoji}
-                </span>
-              ))}
-            </div>
-          </div>
+  const emojiList = Object.entries(emojis).map(([category, emojiList]) => (
+    <div key={category} className={category}>
+      <h2>{category}</h2>
+      <div>
+        {emojiList.map((emoji) => (
+          <span key={emoji} className={emoji} onClick={() => copyEmoji(emoji)}>
+            {emoji}
+          </span>
         ))}
-      </main>
+      </div>
+    </div>
+  ));
+
+  return (
+    <div className="flex justify-center items-center h-screen">
+      <div className="bg-green-500 text-white p-4">
+        {emojiList}
+      </div>
     </div>
   );
 }
