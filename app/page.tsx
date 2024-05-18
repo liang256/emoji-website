@@ -1,19 +1,23 @@
 'use client'
 
-// Import necessary modules and data
+import React, { useState } from 'react';
 import { EmojiCategory } from './types';
 import emojiData from './emoji.json';
 
-// Convert JSON data to EmojiCategory type
 const emojis: EmojiCategory = emojiData;
 
 const Home: React.FC = () => {
+  const [copied, setCopied] = useState(false);
+
   // Function to copy emoji to clipboard
   const copyEmoji = (emoji: string) => {
     navigator.clipboard.writeText(emoji).then(() => {
-      alert(`Emoji copied: ${emoji}`);
+      setCopied(true);
+      setTimeout(() => {
+        setCopied(false);
+      }, 2000); // Display message for 2 seconds
     }).catch(() => {
-      alert('Failed to copy emoji.');
+      console.error('Failed to copy emoji.');
     });
   };
 
@@ -34,6 +38,7 @@ const Home: React.FC = () => {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
       <div className="mb-8 p-4 bg-green-500 text-white max-w-screen-md mx-auto">
+        {copied && <div className="fixed top-4 right-4 bg-blue-500 text-white p-2 rounded">Copied!</div>}
         {emojiList}
       </div>
     </div>
