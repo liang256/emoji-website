@@ -1,19 +1,12 @@
 'use client'
 
-import Head from 'next/head';
-import './home.module.css';
+// pages/index.tsx
+import { EmojiCategory } from './types';
+import emojiData from './emoji.json';
 
-interface EmojiCategory {
-  [category: string]: string[];
-}
+const emojis: EmojiCategory = emojiData;
 
-const emojis: EmojiCategory = {
-  'Smileys & People': ['😀', '😃', '😄'],
-  'Animals & Nature': ['🐱', '🐶', '🐭'],
-  // Add more categories and emojis
-};
-
-export default function Home() {
+const Home: React.FC = () => {
   const copyEmoji = (emoji: string) => {
     navigator.clipboard.writeText(emoji).then(() => {
       alert(`Emoji copied: ${emoji}`);
@@ -42,4 +35,6 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+
+export default Home;
