@@ -19,7 +19,7 @@ const Home: React.FC = () => {
 
   // Generate emoji list
   const emojiList = Object.entries(emojis).map(([category, emojiList]) => (
-    <div key={category} className="mb-8">
+    <div>
       <h2 className="text-2xl font-bold mb-4">{category}</h2>
       <div className="flex flex-wrap">
         {emojiList.map((emoji) => (
@@ -33,7 +33,7 @@ const Home: React.FC = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="bg-green-500 text-white p-4">
+      <div className="mb-8 p-4 bg-green-500 text-white max-w-screen-md mx-auto">
         {emojiList}
       </div>
     </div>
