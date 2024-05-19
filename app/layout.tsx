@@ -81,6 +81,7 @@ export default function RootLayout({
           }}
         />
         {/* Google AdSence */}
+        <meta name="google-adsense-account" content="ca-pub-3438250780938861"></meta>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3438250780938861"
      crossOrigin="anonymous"></script>
       </head>
