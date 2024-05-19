@@ -65,7 +65,7 @@ export default function RootLayout({
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Emoji Picker" />
         <meta name="twitter:description" content="Explore and copy various emojis by category" />
-        <meta name="twitter:image" content="https://emoji.liangyu.dev/twitter-image.jpg" />
+        <meta name="twitter:image" content="https://emoji.liangyu.dev/og-image-image.jpg" />
         {/* Structured Data */}
         <script
           type="application/ld+json"
