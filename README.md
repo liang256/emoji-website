@@ -1,4 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Emoji Website
+
+This project is an Emoji Website built with Next.js and Tailwind CSS. Users can explore various emojis by category and copy them to the clipboard with a single click.
+
+## Features
+
+- Display emojis categorized by different groups.
+- Click on any emoji to copy it to the clipboard.
+- Responsive design using Tailwind CSS.
+- Metadata for improved SEO.
+- Footer with developer information and GitHub link.
+
+## Technologies Used
+
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
 ## Getting Started
 
