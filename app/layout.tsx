@@ -6,10 +6,10 @@ import Footer from "./conponents/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Emoji Website",
+  title: "Emoji Picker",
   description: "Explore and copy various emojis by category",
   openGraph: {
-    title: "Emoji Website",
+    title: "Emoji Picker",
     description: "Explore and copy various emojis by category",
     type: "website",
     url: "https://emoji.liangyu.dev",
@@ -27,17 +27,17 @@ export default function RootLayout({
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Emoji Website</title>
+        <title>Emoji Picker</title>
         <meta name="description" content={metadata.description ?? ""} />
         {/* Open Graph Meta Tags */}
-        <meta property="og:title" content="Emoji Website" />
+        <meta property="og:title" content="Emoji Picker" />
         <meta property="og:description" content="Explore and copy various emojis by category" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://emoji.liangyu.dev" />
         <meta property="og:image" content="https://emoji.liangyu.dev/og-image.jpg" />
         {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Emoji Website" />
+        <meta name="twitter:title" content="Emoji Picker" />
         <meta name="twitter:description" content="Explore and copy various emojis by category" />
         <meta name="twitter:image" content="https://emoji.liangyu.dev/twitter-image.jpg" />
         {/* Structured Data */}

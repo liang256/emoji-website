@@ -1,6 +1,6 @@
-# Emoji Website
+# Emoji Picker
 
-This project is an Emoji Website built with Next.js and Tailwind CSS. Users can explore various emojis by category and copy them to the clipboard with a single click.
+This project is an Emoji Picker built with Next.js and Tailwind CSS. Users can explore various emojis by category and copy them to the clipboard with a single click.
 
 ## Features
 
