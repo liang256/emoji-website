@@ -23,7 +23,7 @@ const Home: React.FC = () => {
 
   // Generate emoji list
   const emojiList = Object.entries(emojis).map(([category, emojiList]) => (
-    <div>
+    <div key={category}>
       <h2 className="text-2xl font-bold mb-4">{category}</h2>
       <div className="flex flex-wrap">
         {emojiList.map((emoji) => (
