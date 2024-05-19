@@ -36,16 +36,10 @@ const Home: React.FC = () => {
   ));
 
   return (
-    <div>
-      <div className="m-4">
-      <h1 className="text-4xl font-bold text-center mt-8 text-green-500">Emoji Picker</h1>
-      <p className="text-center p-2 text-gray-800">Click on an emoji to copy it to clipboard.</p>
-      </div>
-      <div className="flex justify-center items-center min-h-screen bg-gray-100">
-        <div className="mb-8 p-4 bg-green-500 text-white max-w-screen-md mx-auto">
-          {copied && <div className="fixed top-4 right-4 bg-blue-500 text-white p-2 rounded">Copied!</div>}
-          {emojiList}
-        </div>
+    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+      <div className="mb-8 p-4 bg-green-500 text-white max-w-screen-md mx-auto">
+        {copied && <div className="fixed top-4 right-4 bg-blue-500 text-white p-2 rounded">Copied!</div>}
+        {emojiList}
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Footer from "./conponents/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -54,8 +55,15 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.className} flex justify-center items-center min-h-screen bg-gray-100`}>
-        {children}
+      <body>
+        <header>
+          <div className="container mx-auto text-center">
+            <h1 className="text-4xl font-bold text-center mt-8 text-green-500">Emoji Picker</h1>
+            <p className="text-center p-2 text-gray-800">Click on an emoji to copy it to clipboard.</p>
+          </div>
+        </header>
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
