@@ -54,6 +54,9 @@ export default function RootLayout({
             }),
           }}
         />
+        {/* Google AdSence */}
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3438250780938861"
+     crossOrigin="anonymous"></script>
       </head>
       <body>
         <header>
